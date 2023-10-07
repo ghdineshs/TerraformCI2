@@ -46,7 +46,7 @@ resource "azurerm_storage_account" "storage2" {
 
 resource "azurerm_storage_blob" "blob1" {
   name = "ghdcont"
-  type = "block"
+  type = "Block"
   storage_container_name = "ghdcont"
   storage_account_name = azurerm_storage_account.storage.name
 }
