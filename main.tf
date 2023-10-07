@@ -44,9 +44,9 @@ resource "azurerm_storage_account" "storage2" {
   account_tier             = "Standard"
 }
 
-resource "azurerm_storage_blob" "blob1" {
-  name = "ghdcont"
-  type = "Block"
-  storage_container_name = "ghdcont"
-  storage_account_name = azurerm_storage_account.storage.name
+resource "azurerm_storage_container" "example" {
+  name                  = "content"
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "private"
 }
+
